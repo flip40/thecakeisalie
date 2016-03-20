@@ -59,6 +59,7 @@
     <instance objName="cake" x="512" y="448" name="inst_15FB8E9D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="enemy1" x="32" y="352" name="inst_DDD5DAF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="enemy1" x="960" y="384" name="inst_147FAEC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="player2" x="608" y="416" name="inst_2701E75B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
