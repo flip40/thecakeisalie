@@ -27,11 +27,11 @@
             <kind>1</kind>
             <string>// Initialize Variables
 //friction = 1;
-grav = 2;
+grav = 1;
 hsp = 0;
 vsp = 0;
-jumpspeed = 12;
-movespeed = 8;
+jumpspeed = 9;
+movespeed = 5;
 hpdamage = 0;
 weight = 1;
 </string>
