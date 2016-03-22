@@ -16,7 +16,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_character_physics_variables.gml</script>
-    <script>scripts\scr_character_physics_functions.gml</script>
+    <script>scripts\scr_character_physics.gml</script>
     <script>scripts\scr_character_variables.gml</script>
   </scripts>
   <objects name="objects">

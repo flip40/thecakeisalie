@@ -76,30 +76,12 @@ switch (state) {
     break;
 }
 
-// React to input
-hsp = dir * movespeed;
-vsp = 0; // add jump reactions later (if necessary)
+// Interpret ai input
+hinput = dir;
+vinput = 0; // add jump reactions later (if necessary)
 
-// Increase gravity
-if (vsp &lt; 10) vsp += grav;
-
-// Horizontal Collision
-if (place_meeting(x + hsp, y, obj_collidable_parent)) {
-    while (!place_meeting(x + sign(hsp), y, obj_collidable_parent)) {
-        x += sign(hsp);
-    }
-    hsp = 0;
-}
-x += hsp;
-
-// Vertical Collision
-if (place_meeting(x, y + vsp, obj_collidable_parent)) {
-    while (!place_meeting(x, y + sign(vsp), obj_collidable_parent)) {
-        y += sign(vsp);
-    }
-    vsp = 0;
-}
-y += vsp;
+// Physics
+scr_character_physics(id, hinput, vinput);
 </string>
           </argument>
         </arguments>
