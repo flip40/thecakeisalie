@@ -3,8 +3,8 @@
 grav = 1;
 hsp = 0;
 vsp = 0;
-haccel = 2;
+haccel = 6;
 //vaccel = 2;
-jumpspeed = 9;
-movespeed = 5;
+jumpspeed = 18;
+movespeed = 10;
 hpdamage = 0;
