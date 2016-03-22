@@ -12,7 +12,8 @@
   <showcolour>-1</showcolour>
   <code>enum ai_state {
     attack_cake,
-    attack_player
+    attack_player,
+    wait
 }</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>

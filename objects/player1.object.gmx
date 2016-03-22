@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_lifeform</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -26,14 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>// Initialize Variables
-//friction = 1;
-grav = 1;
-hsp = 0;
-vsp = 0;
-jumpspeed = 9;
-movespeed = 5;
-hpdamage = 0;
-weight = 1;
+event_inherited();
 </string>
           </argument>
         </arguments>
@@ -62,13 +55,16 @@ key_left = -keyboard_check(vk_left);
 key_up = keyboard_check_pressed(vk_up);
 
 // React to input
-move = key_left + key_right;
-hsp = move * movespeed;
+dir = key_left + key_right;
+hsp = dir * movespeed;
+
+if (key_up &amp;&amp; place_meeting(x, y+1, obj_collidable_parent)) {
+    vsp = -jumpspeed;
+}
+
+// Increase gravity
 if (vsp &lt; 10) vsp += grav;
 
-if (place_meeting(x, y+1, obj_collidable_parent)) {
-    vsp = key_up * -jumpspeed;
-}
 
 // Horizontal Collision
 if (place_meeting(x + hsp, y, obj_collidable_parent)) {

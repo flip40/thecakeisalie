@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_lifeform</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -26,14 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>// Initialize Variables
-//friction = 1;
-grav = 1;
-hsp = 0;
-vsp = 0;
-jumpspeed = 9;
-movespeed = 5;
-hpdamage = 0;
-weight = 1;
+event_inherited();
 state = ai_state.attack_cake;
 </string>
           </argument>
@@ -57,21 +50,37 @@ state = ai_state.attack_cake;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Get directions
+            <string>// Get directions (ai input)
 switch (state) {
 
     case ai_state.attack_cake: {
         dir = sign(cake.x - x);
-        hsp = dir * movespeed;
     }
     break;
     
     case ai_state.attack_player: {
-        
+        distance_player1 = player1.x - x;
+        distance_player2 = player2.x - x;
+        if (abs(distance_player1) &lt; abs(distance_player2)) {
+            dir = sign(distance_player1);
+        }
+        else {
+            dir = sign(distance_player2);
+        }
+    }
+    break;
+    
+    case ai_state.wait: {
+        dir = 0;
     }
     break;
 }
 
+// React to input
+hsp = dir * movespeed;
+vsp = 0; // add jump reactions later (if necessary)
+
+// Increase gravity
 if (vsp &lt; 10) vsp += grav;
 
 // Horizontal Collision

@@ -14,6 +14,11 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_character_physics_variables.gml</script>
+    <script>scripts\scr_character_physics_functions.gml</script>
+    <script>scripts\scr_character_variables.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\player1</object>
     <object>objects\player2</object>
@@ -22,6 +27,7 @@
     <object>objects\cake</object>
     <object>objects\enemy1</object>
     <object>objects\enemy_spawner</object>
+    <object>objects\obj_lifeform</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
