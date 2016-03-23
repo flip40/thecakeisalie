@@ -66,6 +66,10 @@ else {
 
 // Physics
 scr_character_physics(id, hinput, vinput);
+
+// Animation
+scr_character_sprite_direction(id, hinput);
+
 </string>
           </argument>
         </arguments>

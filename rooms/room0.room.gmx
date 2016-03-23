@@ -57,7 +57,7 @@
   <instances>
     <instance objName="player1" x="1152" y="384" name="inst_30D4B2D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ground" x="980" y="480" name="inst_031FC759" locked="0" code="" scaleX="90.879997253418" scaleY="6" colour="4294967295" rotation="0"/>
-    <instance objName="cake" x="1024" y="413" name="inst_BCE00A1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cake" x="1024" y="413" name="inst_BCE00A1D" locked="0" code="" scaleX="0.800000011920929" scaleY="0.800000011920929" colour="4294967295" rotation="0"/>
     <instance objName="player2" x="896" y="384" name="inst_46495BBF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="enemy_spawner" x="25" y="409" name="inst_EC32FF80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="enemy_spawner" x="2009" y="409" name="inst_CB97A6C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
