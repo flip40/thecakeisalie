@@ -24,6 +24,7 @@
     <sprite>sprites\spr_weiss_walk_bread</sprite>
     <sprite>sprites\spr_weiss_walk_swordfish</sprite>
     <sprite>sprites\spr_yang</sprite>
+    <sprite>sprites\spr_damage</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -32,6 +33,8 @@
     <script>scripts\scr_character_physics.gml</script>
     <script>scripts\scr_character_variables.gml</script>
     <script>scripts\scr_character_sprite_direction.gml</script>
+    <script>scripts\scr_character_attack.gml</script>
+    <script>scripts\scr_character_knockback.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\player1</object>
@@ -42,6 +45,7 @@
     <object>objects\enemy1</object>
     <object>objects\enemy_spawner</object>
     <object>objects\obj_lifeform</object>
+    <object>objects\obj_basic_hitbox</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

@@ -3,8 +3,10 @@
 grav = 1;
 hsp = 0;
 vsp = 0;
-haccel = 3;
+haccel = 1;
 //vaccel = 2;
 jumpspeed = 14;
 movespeed = 7;
 hpdamage = 0;
+facingdir = 1;
+knockback = 0;
