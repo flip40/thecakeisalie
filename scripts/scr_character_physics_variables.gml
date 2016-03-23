@@ -3,7 +3,7 @@
 grav = 1;
 hsp = 0;
 vsp = 0;
-haccel = 6;
+haccel = 3;
 //vaccel = 2;
 jumpspeed = 14;
 movespeed = 7;

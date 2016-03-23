@@ -7,7 +7,17 @@ vinput = argument[2];
 if (vsp < 10) vsp += grav;
 
 // Apply motion to inputs
-hsp = hinput * character.movespeed;
+///hsp += hinput * character.haccel;
+//if (abs(character.hsp) >= character.movespeed) hsp = hinput * character.movespeed;
+//hsp = hinput * character.movespeed;
+if (hinput != 0) hsp += hinput * character.haccel;
+else {
+    hdir = sign(hsp);
+    if (hdir > 0) hsp -= character.haccel;
+    else hsp += character.haccel;
+    if (hdir != sign(hsp)) hsp = 0;
+}
+if (abs(hsp) > character.movespeed) hsp = hinput * character.movespeed;
 if (vinput) vsp = -character.jumpspeed;
 
 // Horizontal Collision
