@@ -11,6 +11,19 @@
     <sprite>sprites\spr_cake</sprite>
     <sprite>sprites\spr_enemy1</sprite>
     <sprite>sprites\spr_player2</sprite>
+    <sprite>sprites\spr_bread</sprite>
+    <sprite>sprites\spr_mariocastle</sprite>
+    <sprite>sprites\spr_swordfish</sprite>
+    <sprite>sprites\spr_turkey</sprite>
+    <sprite>sprites\spr_weiss</sprite>
+    <sprite>sprites\spr_weiss_bread</sprite>
+    <sprite>sprites\spr_weiss_stab1</sprite>
+    <sprite>sprites\spr_weiss_stab2</sprite>
+    <sprite>sprites\spr_weiss_swordfish</sprite>
+    <sprite>sprites\spr_weiss_walk</sprite>
+    <sprite>sprites\spr_weiss_walk_bread</sprite>
+    <sprite>sprites\spr_weiss_walk_swordfish</sprite>
+    <sprite>sprites\spr_yang</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
