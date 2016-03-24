@@ -23,8 +23,12 @@
     <sprite>sprites\spr_weiss_walk</sprite>
     <sprite>sprites\spr_weiss_walk_bread</sprite>
     <sprite>sprites\spr_weiss_walk_swordfish</sprite>
-    <sprite>sprites\spr_yang</sprite>
     <sprite>sprites\spr_damage</sprite>
+    <sprite>sprites\spr_bench</sprite>
+    <sprite>sprites\spr_table</sprite>
+    <sprite>sprites\spr_yang</sprite>
+    <sprite>sprites\spr_yang_punch</sprite>
+    <sprite>sprites\spr_yang_walk</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -35,6 +39,7 @@
     <script>scripts\scr_character_sprite_direction.gml</script>
     <script>scripts\scr_character_attack.gml</script>
     <script>scripts\scr_character_knockback.gml</script>
+    <script>scripts\scr_character_walk.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\player1</object>

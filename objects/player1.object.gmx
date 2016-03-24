@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>// Initialize Variables
 event_inherited();
+sprite_idle = spr_weiss_swordfish;
+sprite_attack = spr_weiss_stab1;
+sprite_walk = spr_weiss_walk;
 </string>
           </argument>
         </arguments>
@@ -75,7 +78,7 @@ scr_character_attack(id, ainput);
 
 // Animation
 scr_character_sprite_direction(id, hinput);
-
+scr_character_walk(id, hinput);
 </string>
           </argument>
         </arguments>
@@ -98,10 +101,14 @@ scr_character_sprite_direction(id, hinput);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (sprite_index == spr_weiss_stab1) {
-    sprite_index = spr_weiss_swordfish;
+            <string>if (sprite_index == sprite_attack) {
+    sprite_index = sprite_idle;
     attacked = false;
     attacking = false;
+}
+
+if (sprite_index == sprite_idle) {
+    if (hsp == 0) sprite_index = sprite_idle;
 }
 </string>
           </argument>
