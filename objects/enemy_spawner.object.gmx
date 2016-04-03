@@ -54,7 +54,7 @@ spawn_delay *= 1000000;
           <argument>
             <kind>1</kind>
             <string>// Update current time delta
-//last_spawned += delta_time;
+last_spawned += delta_time;
 
 // Spawn enemy if waited long enough
 if (last_spawned &gt;= spawn_delay) {

@@ -22,20 +22,21 @@ if (hinput != 0) {
 else if (hsp != 0) {
     hdir = sign(hsp);
     hsp -= sign(hsp) * character.haccel;
-    if (hdir > 0) {
-//        hsp -= character.haccel;
+    // Debug text
+/*    if (hdir > 0) {
         show_debug_message("slowing left");
     }
     else {
-//        hsp += character.haccel;
         show_debug_message("slowing right");
     }
+*/
+    // Correct for overcompensation (if pass the 0 mark, set to 0)
     if (hdir != sign(hsp)) {
         hsp = 0;
-        show_debug_message("stopping");
+//        show_debug_message("stopping");
     }
-    if (abs(hsp) > character.movespeed) show_debug_message(string(id) + " error!");
-    show_debug_message(string(hsp));
+//    if (abs(hsp) > character.movespeed) show_debug_message(string(id) + " error!");
+//    show_debug_message(string(hsp));
 }
 if (vinput) vsp = -character.jumpspeed; // Gravity
 
