@@ -25,8 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>damage = 10;
-knockback = 30;
+            <string>/// Initialize Variables
+damage = 10;
+knockback = 28;
 creator = noone;
 alarm[0] = 2;
 </string>

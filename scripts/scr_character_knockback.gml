@@ -1,7 +1,7 @@
 character = argument[0];
 knockback = argument[1];
 
-character.knockback = knockback;
+character.hsp = knockback;
 character.vsp = -character.jumpspeed;
 if (character.object_index != player1 && character.object_index != player2) {
     character.hp -= 1;

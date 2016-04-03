@@ -3,38 +3,42 @@ character = argument[0];
 hinput = argument[1];
 vinput = argument[2];
 
-if (hinput != 0) facingdir = sign(hinput);
-
 // Increase gravity
 if (vsp < 10) vsp += grav;
 
-if (knockback == 0) {
-    // Apply motion to inputs
-    if (hinput != 0) hsp += hinput * character.haccel;
-    else {
-        hdir = sign(hsp);
-        if (hdir > 0) hsp -= character.haccel;
-        else hsp += character.haccel;
-        if (hdir != sign(hsp)) hsp = 0;
-    }
+// Apply motion to inputs
+// If moving past max speed (knockback effects) then act as if no input (deccelerate)
+if (abs(hsp) > character.movespeed) {
+    hinput = 0;
+    show_debug_message("moving too fast!");
+}
+// Else if input is not 0, accelerate in the appropriate direction
+if (hinput != 0) {
+    hsp += hinput * character.haccel;
+    // Cap at max speed
     if (abs(hsp) > character.movespeed) hsp = hinput * character.movespeed;
-    if (vinput) vsp = -character.jumpspeed;
 }
-else {
-    kdir = sign(character.knockback);
-    if (kdir > 0) {
-        character.knockback -= character.haccel;
-        hsp -= character.haccel;
+// If no input then deccellerate
+else if (hsp != 0) {
+    hdir = sign(hsp);
+    hsp -= sign(hsp) * character.haccel;
+    if (hdir > 0) {
+//        hsp -= character.haccel;
+        show_debug_message("slowing left");
     }
     else {
-        character.knockback += character.haccel;
-        hsp += character.haccel;
+//        hsp += character.haccel;
+        show_debug_message("slowing right");
     }
-    if (kdir != sign(hsp)) {
-        character.knockback = 0;
+    if (hdir != sign(hsp)) {
         hsp = 0;
+        show_debug_message("stopping");
     }
+    if (abs(hsp) > character.movespeed) show_debug_message(string(id) + " error!");
+    show_debug_message(string(hsp));
 }
+if (vinput) vsp = -character.jumpspeed; // Gravity
+
 // Horizontal Collision
 if (place_meeting(x + hsp, y, obj_collidable_parent)) {
     while (!place_meeting(x + sign(hsp), y, obj_collidable_parent)) {
