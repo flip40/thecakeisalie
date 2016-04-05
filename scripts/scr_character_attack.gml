@@ -15,7 +15,7 @@ if(character.attacking) {
         // attack on second frame
         if (image_index >= 1 && attacked = false) {
             damage = instance_create(character.x + (character.facingdir * 35), character.y, obj_basic_hitbox);
-            damage.creator = id;
+            damage.creator = character;
             attacked = true;
         }
     }

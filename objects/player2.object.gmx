@@ -107,6 +107,10 @@ scr_character_walk(id, hinput);
     attacked = false;
     attacking = false;
 }
+
+if (sprite_index == sprite_idle) {
+    if (hsp == 0) sprite_index = sprite_idle;
+}
 </string>
           </argument>
         </arguments>

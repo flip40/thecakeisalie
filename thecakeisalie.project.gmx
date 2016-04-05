@@ -29,8 +29,26 @@
     <sprite>sprites\spr_yang</sprite>
     <sprite>sprites\spr_yang_punch</sprite>
     <sprite>sprites\spr_yang_walk</sprite>
+    <sprite>sprites\spr_blake</sprite>
+    <sprite>sprites\spr_blake_bread</sprite>
+    <sprite>sprites\spr_blake_slash</sprite>
+    <sprite>sprites\spr_blake_slash_bread</sprite>
+    <sprite>sprites\spr_blake_walk</sprite>
+    <sprite>sprites\spr_blake_walk_bread</sprite>
+    <sprite>sprites\spr_cup</sprite>
+    <sprite>sprites\spr_cup_handle</sprite>
+    <sprite>sprites\spr_glass</sprite>
+    <sprite>sprites\spr_pancake</sprite>
+    <sprite>sprites\spr_plate</sprite>
+    <sprite>sprites\spr_yang_punch_turkey</sprite>
+    <sprite>sprites\spr_yang_turkey</sprite>
+    <sprite>sprites\spr_yang_walk_turkey</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background_forest</background>
+    <background>background\background_window</background>
+    <background>background\foreground_table</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_character_physics_variables.gml</script>

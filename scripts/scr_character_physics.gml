@@ -10,7 +10,7 @@ if (vsp < 10) vsp += grav;
 // If moving past max speed (knockback effects) then act as if no input (deccelerate)
 if (abs(hsp) > character.movespeed) {
     hinput = 0;
-    show_debug_message("moving too fast!");
+//    show_debug_message("moving too fast!");
 }
 // Else if input is not 0, accelerate in the appropriate direction
 if (hinput != 0) {

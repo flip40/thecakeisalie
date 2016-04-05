@@ -29,7 +29,7 @@
 event_inherited();
 sprite_idle = spr_weiss_swordfish;
 sprite_attack = spr_weiss_stab1;
-sprite_walk = spr_weiss_walk;
+sprite_walk = spr_weiss_walk_swordfish;
 </string>
           </argument>
         </arguments>
@@ -77,8 +77,8 @@ scr_character_physics(id, hinput, vinput);
 scr_character_attack(id, ainput);
 
 // Animation
-scr_character_sprite_direction(id, hinput);
 scr_character_walk(id, hinput);
+scr_character_sprite_direction(id, hinput);
 </string>
           </argument>
         </arguments>
@@ -107,8 +107,13 @@ scr_character_walk(id, hinput);
     attacking = false;
 }
 
-if (sprite_index == sprite_idle) {
-    if (hsp == 0) sprite_index = sprite_idle;
+//if (sprite_index == sprite_idle) {
+//    if (hsp == 0) sprite_index = sprite_idle;
+//}
+
+if (sprite_index == sprite_walk) {
+    sprite_index = sprite_idle;
+    walking = false;
 }
 </string>
           </argument>

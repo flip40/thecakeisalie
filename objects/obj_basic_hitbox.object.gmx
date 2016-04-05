@@ -2,7 +2,7 @@
 <object>
   <spriteName>spr_damage</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -25,11 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Initialize Variables
-damage = 10;
-knockback = 28;
+            <string>damage = 10;
+knockback = 30;
 creator = noone;
 alarm[0] = 2;
+//hitarray[];
+hitcount = 0;
 </string>
           </argument>
         </arguments>
@@ -75,9 +76,14 @@ alarm[0] = 2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (other.id != creator) {
+            <string>if (other.id != creator.id) {
+    // check if already hit entity
+    for (i = 0; i &lt; hitcount; i++) {
+        if (other.id == hitarray[i]) exit;
+    }
     other.hpdamage += damage;
-    scr_character_knockback(other.id, sign(other.x - x) * knockback);
+    hitarray[hitcount++] = other.id;
+    scr_character_knockback(other.id, sign(other.x - creator.x) * knockback);
 }
 </string>
           </argument>
