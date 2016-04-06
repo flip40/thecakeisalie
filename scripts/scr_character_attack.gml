@@ -20,8 +20,17 @@ if(character.attacking) {
         }
     }
     break;
-    case spr_yang_punch: {
-        // attack on second frame
+    case spr_yang_punch_turkey: {
+        // attack on first frame
+        if (image_index >= 0 && attacked = false) {
+            damage = instance_create(character.x + (character.facingdir * 35), character.y, obj_basic_hitbox);
+            damage.creator = id;
+            attacked = true;
+        }
+    }
+    break;
+    case spr_blake_slash_bread: {
+        // attack on first frame
         if (image_index >= 0 && attacked = false) {
             damage = instance_create(character.x + (character.facingdir * 35), character.y, obj_basic_hitbox);
             damage.creator = id;

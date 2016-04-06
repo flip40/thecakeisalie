@@ -43,6 +43,15 @@
     <sprite>sprites\spr_yang_punch_turkey</sprite>
     <sprite>sprites\spr_yang_turkey</sprite>
     <sprite>sprites\spr_yang_walk_turkey</sprite>
+    <sprite>sprites\spr_beowulf</sprite>
+    <sprite>sprites\spr_beowulf_swipe</sprite>
+    <sprite>sprites\spr_beowulf_walk</sprite>
+    <sprite>sprites\spr_nora</sprite>
+    <sprite>sprites\spr_nora_swing</sprite>
+    <sprite>sprites\spr_nora_walk</sprite>
+    <sprite>sprites\spr_nora_walk_watermelon</sprite>
+    <sprite>sprites\spr_nora_watermelon</sprite>
+    <sprite>sprites\spr_menu_arrow</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background_forest</background>
@@ -58,7 +67,13 @@
     <script>scripts\scr_character_attack.gml</script>
     <script>scripts\scr_character_knockback.gml</script>
     <script>scripts\scr_character_walk.gml</script>
+    <script>scripts\scr_menu.gml</script>
+    <script>scripts\scr_set_characters.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_menu</font>
+    <font>fonts\fnt_description</font>
+  </fonts>
   <objects name="objects">
     <object>objects\player1</object>
     <object>objects\player2</object>
@@ -69,9 +84,13 @@
     <object>objects\enemy_spawner</object>
     <object>objects\obj_lifeform</object>
     <object>objects\obj_basic_hitbox</object>
+    <object>objects\obj_menu</object>
+    <object>objects\obj_char_select</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\rm_start_menu</room>
+    <room>rooms\rm_char_select</room>
+    <room>rooms\rm_table</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

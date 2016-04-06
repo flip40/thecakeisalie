@@ -27,9 +27,10 @@
             <kind>1</kind>
             <string>// Initialize Variables
 event_inherited();
-sprite_idle = spr_weiss_swordfish;
-sprite_attack = spr_weiss_stab1;
-sprite_walk = spr_weiss_walk_swordfish;
+sprite_idle = global.p1idle;
+sprite_attack = global.p1attack;
+sprite_walk = global.p1walk;
+sprite_index = sprite_idle;
 </string>
           </argument>
         </arguments>
@@ -106,10 +107,6 @@ scr_character_sprite_direction(id, hinput);
     attacked = false;
     attacking = false;
 }
-
-//if (sprite_index == sprite_idle) {
-//    if (hsp == 0) sprite_index = sprite_idle;
-//}
 
 if (sprite_index == sprite_walk) {
     sprite_index = sprite_idle;
