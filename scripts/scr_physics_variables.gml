@@ -1,6 +1,7 @@
 // Initialize Variables
 //friction = 1;
 grav = 1;
+weight = 1;
 hsp = 0;
 vsp = 0;
 haccel = 1;
@@ -9,7 +10,7 @@ jumpspeed = 14;
 movespeed = 7;
 hpdamage = 0;
 facingdir = 1;
-knockback = 0;
+//knockback = 0;
 
 //if (abs(hsp) > character.movespeed) hinput = 0;
 //else if (hinput != 0) {

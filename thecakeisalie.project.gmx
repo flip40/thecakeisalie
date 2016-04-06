@@ -60,15 +60,19 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_character_physics_variables.gml</script>
+    <script>scripts\scr_physics_variables.gml</script>
     <script>scripts\scr_character_physics.gml</script>
     <script>scripts\scr_character_variables.gml</script>
+    <script>scripts\scr_lifeform_variables.gml</script>
     <script>scripts\scr_character_sprite_direction.gml</script>
     <script>scripts\scr_character_attack.gml</script>
-    <script>scripts\scr_character_knockback.gml</script>
     <script>scripts\scr_character_walk.gml</script>
     <script>scripts\scr_menu.gml</script>
     <script>scripts\scr_set_characters.gml</script>
+    <script>scripts\scr_hit_detection.gml</script>
+    <script>scripts\scr_check_hp.gml</script>
+    <script>scripts\scr_game_over.gml</script>
+    <script>scripts\scr_collidable_physics_y.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_menu</font>
@@ -80,12 +84,15 @@
     <object>objects\ground</object>
     <object>objects\obj_collidable_parent</object>
     <object>objects\cake</object>
-    <object>objects\enemy1</object>
+    <object>objects\obj_enemy_nora</object>
     <object>objects\enemy_spawner</object>
     <object>objects\obj_lifeform</object>
+    <object>objects\obj_collidable_lifeform</object>
     <object>objects\obj_basic_hitbox</object>
     <object>objects\obj_menu</object>
     <object>objects\obj_char_select</object>
+    <object>objects\obj_character</object>
+    <object>objects\obj_escape_button</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start_menu</room>
