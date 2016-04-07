@@ -6,6 +6,6 @@ if (other.id != creator.id && other.team != creator.team) {
     other.hp -= damage;
     other.hpdamage += damage;
     other.vsp = -other.jumpspeed;
-    other.hsp += knockback;
+    other.hsp = sign(x - other.x) * knockback;
     hitarray[hitcount++] = other.id;
 }

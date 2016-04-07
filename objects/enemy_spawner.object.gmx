@@ -58,7 +58,8 @@ last_spawned += delta_time;
 
 // Spawn enemy if waited long enough
 if (last_spawned &gt;= spawn_delay) {
-    instance_create(x, y, obj_enemy_nora);
+    if(random(2) &lt; 1) instance_create(x, y, obj_enemy_nora);
+    else instance_create(x, y, obj_enemy_beowulf);
     last_spawned = 0;
 }
 </string>

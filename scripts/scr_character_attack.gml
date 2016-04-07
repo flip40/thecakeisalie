@@ -48,5 +48,14 @@ if(character.attacking) {
         }
     }
     break;
+    case spr_beowulf_swipe: {
+        // attack on first frame
+        if (image_index >= 0 && attacked = false) {
+            damage = instance_create(character.x + (character.facingdir * 20), character.y, obj_basic_hitbox);
+            damage.creator = id;
+            attacked = true;
+        }
+    }
+    break;
     }
 }

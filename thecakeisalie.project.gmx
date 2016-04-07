@@ -85,6 +85,7 @@
     <object>objects\obj_collidable_parent</object>
     <object>objects\cake</object>
     <object>objects\obj_enemy_nora</object>
+    <object>objects\obj_enemy_beowulf</object>
     <object>objects\enemy_spawner</object>
     <object>objects\obj_lifeform</object>
     <object>objects\obj_collidable_lifeform</object>

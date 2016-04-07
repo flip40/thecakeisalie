@@ -19,7 +19,7 @@ switch (p1char) {
     // Blake
     case 2: {
         global.p1idle = spr_blake_bread;
-        global.p1attack = spr_blake_slash_bread;
+        global.p1attack = spr_blake_slash;
         global.p1walk = spr_blake_walk_bread;    
     }
     break;
