@@ -46,7 +46,7 @@ switch (p2char) {
     // Blake
     case 2: {
         global.p2idle = spr_blake_bread;
-        global.p2attack = spr_blake_slash_bread;
+        global.p2attack = spr_blake_slash;
         global.p2walk = spr_blake_walk_bread;    
     }
     break;

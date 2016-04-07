@@ -30,7 +30,7 @@ if(character.attacking) {
         }
     }
     break;
-    case spr_blake_slash_bread: {
+    case spr_blake_slash: {
         // attack on first frame
         if (image_index >= 0 && attacked = false) {
             damage = instance_create(character.x + (character.facingdir * 20), character.y, obj_basic_hitbox);
